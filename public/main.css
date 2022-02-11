@@ -1,0 +1,135 @@
+html {
+  overflow-y: hidden;
+  font-family: consolas;
+}
+
+body {
+  margin: 0;
+  background-color: #1f1f1f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  color: white;
+  overflow-y: hidden;
+}
+
+.card {
+  min-width: calc(100vw - 2 * 5px);
+  height: calc(100vh - 2 * 10px);
+  background-color: #4d4d4d;
+  border-radius: 20px;
+  scroll-snap-align: center;
+}
+
+#card_library {
+  margin-left: 10px;
+}
+
+#card_currentTrack {
+  margin: 10px 10px;
+}
+
+#card_discover {
+  margin-right: 10px;
+}
+
+#currentTrack_container {
+  width: calc(100% - 30px);
+  border-radius: 20px;
+  background-color: #333333;
+  padding: 15px;
+}
+
+#currentTrack {
+  width: 100%;
+}
+
+#currentTrack_albumCover {
+  width: 100%;
+  height: auto;
+}
+
+#currentTrack_title {
+  margin: 0;
+  font-size: 13pt;
+}
+
+#currentTrack_artists {
+  margin: 0;
+  font-size: 8pt;
+}
+
+#currentTrack_album {
+  margin: 0;
+  font-size: 8pt;
+}
+
+#currentTrack_controlsContainer_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0;
+}
+
+#playPause {
+  font-size: 26pt;
+}
+
+#currentTrack_progressBar {
+  width: 100%;
+}
+
+#searchbar {
+  height: 32pt;
+  width: 92%;
+  margin: 15px 2.5%;
+  border-radius: 20px;
+  border: 0;
+  background-color: #333333;
+  color: white;
+  font-size: 12pt;
+}
+
+#card_library input[type="text"] {
+  padding-left: 10px;
+}
+
+#searchResults {
+  width: 100%;
+  max-height: calc(100vh - 20px - 32pt - 33px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow-y: scroll;
+}
+
+.listedTrack {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 8pt 2.5%;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #1f1f1f;
+  border-style: solid;
+  border-width: 0 0 1px 0;
+}
+/*# sourceMappingURL=main.css.map */

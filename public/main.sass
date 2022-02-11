@@ -1,0 +1,108 @@
+$gray-bg: #1f1f1f
+$gray-dark: #333333
+$gray-medium: #4d4d4d
+$gray-light: #e6e6e6
+$searchbar-height: 32pt
+$card-spacing-x: 5px
+$card-spacing-y: 10px
+
+html
+    overflow-y: hidden
+    font-family: consolas
+
+body 
+    margin: 0
+    background-color: $gray-bg
+    display: flex
+    align-items: center
+    scroll-snap-type: x mandatory
+    color: white
+    overflow-y: hidden
+
+.card
+    min-width: calc(100vw - 2 * #{$card-spacing-x})
+    height: calc(100vh - 2 * #{$card-spacing-y})
+    background-color: $gray-medium
+    border-radius: 20px
+    scroll-snap-align: center
+
+#card_library
+    margin-left: 10px
+
+#card_currentTrack
+    margin: 10px 10px
+
+#card_discover
+    margin-right: 10px
+
+#currentTrack_container
+    width: calc(100% - 30px)
+    border-radius: 20px
+    background-color: $gray-dark
+    padding: 15px
+
+#currentTrack
+    width: 100%
+
+#currentTrack_albumCover
+    width: 100%
+    height: auto
+
+#currentTrack_title
+    margin: 0
+    font-size: 13pt
+
+#currentTrack_artists
+    margin: 0
+    font-size: 8pt
+
+#currentTrack_album
+    margin: 0
+    font-size: 8pt
+
+#currentTrack_controlsContainer_wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin: 10px 0
+
+#playPause
+    // width: 40px
+    // height: 40px
+    // background-color: $gray-medium
+    // border-radius: 50%
+    font-size: 26pt
+
+#currentTrack_progressBar
+    width: 100%
+
+#searchbar
+    height: $searchbar-height
+    width: 92%
+    margin: 15px 2.5%
+    border-radius: 20px
+    border: 0
+    background-color: $gray-dark
+    color: white
+    font-size: 12pt
+
+#card_library input[type="text"]
+    padding-left: 10px
+
+#searchResults
+    width: 100%
+    max-height: calc(100vh - 20px - #{$searchbar-height} - 33px)
+    display: flex
+    flex-wrap: wrap
+    overflow-y: scroll
+
+.listedTrack
+    width: 100%
+    display: flex
+    flex-direction: column
+    padding: 8pt 2.5%
+    cursor: pointer
+    background-color: rgba(0,0,0,0)
+    border-color: $gray-bg
+    border-style: solid
+    border-width: 0 0 1px 0

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Element</title>
+        <link rel="stylesheet" href="./main.css">
+        <script src="./socket.io/socket.io.js"></script>
+        <script src="./functions.js"></script>
+        <script src="./client.js"></script>
+</head>
+<body>
+    <div id="card_library" class="card">
+        <input id="searchbar" type="text" placeholder="Search for anything..."> 
+        <div id="searchResults"></div>
+    </div>
+    <div id="card_currentTrack" class="card">
+        <div id="currentTrack_container">
+            <img id="currentTrack_albumCover" src="" alt="">
+            <div id="currentTrack_dataContainer">
+                <h1 id="currentTrack_title">Title</h1>
+                <h2 id="currentTrack_artists">Artist</h2>
+                <h3 id="currentTrack_album">Album</h3>
+            </div>
+            <div id="currentTrack_controlsContainer">
+                <div id="currentTrack_controlsContainer_wrapper">
+                    <div id="currentTrack_timePlayed">00:00</div>
+                    <div id="playPause" onclick="togglePlayState()">⯈</div>
+                    <div id="currentTrack_duration">xx:xx</div>
+                </div>
+                <input id="currentTrack_progressBar" type="range" min="1" max="1000" value="0">
+            </div>
+            <script>
+                document.querySelector('#currentTrack_progressBar').onchange = function()
+                {
+                    document.querySelector('#currentTrack').currentTime = (this.value/1000)*trackDuration;
+                }
+            </script>
+            <audio id="currentTrack" controls style="display: none;"></audio>
+            <!-- <button onclick="playNext()">next.</button> -->
+        </div>
+    </div>
+    <div id="card_discover" class="card">
+    </div>
+</body>
+</html>
